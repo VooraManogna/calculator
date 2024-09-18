@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="1st.css">
+    <script>
+        function manu(event){
+           var v= document.getElementById("display");
+           v.value+=event;
+            
+        }
+        function doingmaths(){
+            var num1=document.getElementById("display").value;
+            var num2=eval(num1);
+            document.getElementById("display").value=num2;   
+        }
+        function ac(){
+            
+            document.getElementById("display").value="";
+
+        }
+        function del(){
+            var num3=document.getElementById("display");
+            num3.value=num3.value.slice(0,-1);
+        }
+        
+         
+    </script>
+</head>
+<body>
+    <div class="calculator">
+        <div class="voora">
+    <input type="text" id="display"></br>
+    <div class="all">
+    <div class="first">
+    <input type="button" value="00" onclick="manu('00')">
+    <input type="button" value="del" onclick="del()">
+    <input type="button" value="."  id="dot" onclick="manu('.')">
+    <input type="button" value="/"  onclick="manu('/')">
+    </div>
+    <div class="second">
+        <input type="button" value="7" onclick="manu('7')">
+        <input type="button" value="8" onclick="manu('8')">
+        <input type="button" value="9" onclick="manu('9')">
+        <input type="button" value="*"   onclick="manu('*')">
+        </div>
+        <div class="third">
+            <input type="button" value="4" onclick="manu('4')">
+            <input type="button" value="5" onclick="manu('5')">
+            <input type="button" value="6" onclick="manu('6')">
+            <input type="button" value="-"   onclick="manu('-')">
+            </div>
+            <div class="forth">
+                <input type="button" value="1" onclick="manu('1')">
+                <input type="button" value="2" onclick="manu('2')">
+                <input type="button" value="3" onclick="manu('3')">
+                <input type="button" value="+"  onclick="manu('+')">
+            </div>
+                <div class="five">
+                    <input type="button" value="AC" onclick="ac()">
+                    <input type="button" value="0" onclick="manu('0')">
+                    <input type="button" value="=" class="equal" onclick="doingmaths()">
+                    </div>
+                    
+                   
+         </div>
+</div>
+</div>
+</body>
+</html>
